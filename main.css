@@ -1,0 +1,46 @@
+body{
+	margin-bottom:4%;
+}
+.container{
+	margin-top:20px;
+	
+
+}
+.Meal, .charge, .earning{
+	border:2px solid black;
+	padding:25px 10px;
+	border-radius:7px;
+}
+.head{
+font-size:45px;
+text-align:center;
+margin-bottom:2%;
+}
+h2{
+	margin-bottom:5%;
+	border-bottom:1px solid black;
+	padding-bottom:1.5%;
+	width:100%;
+}
+.input-group{
+	width:300px;
+		margin-top:5% !important;
+
+}
+.Meal button{
+	margin-top:40px !important;
+	width:120px;
+	display:block;
+	margin:0 auto;
+}
+.charge{
+	margin-bottom:10%;
+}
+.reset{
+	margin-top:4%;
+	width:100px;
+}
+span{
+	float:right;
+}
+
