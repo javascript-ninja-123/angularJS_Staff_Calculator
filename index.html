@@ -10,63 +10,22 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="head">Waitstaff Calculator</h1>
+            <h1 class="head">Waitstaff Calculator</h1>
+          <header>
+            <a href="#/home">Home</a>
+            <a href="#/newmeal">New Meal</a>
+            <a href="#/myearnings">My Earnings</a>
+          </header>
         </div>
-        <div class="col-md-6 Meal">
-              <h2>Enter the Meal Details</h2>
-              <form class="form-inline" ng-submit="submit()" novalidate name="myForm">
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                  <div class="input-group">
-                      <input type="number" class="form-control" id="exampleInputAmount" placeholder="$ Base Meal Price" ng-model="mealPrice" name="mealPrice" required>
-                       <div ng-show="myForm.mealPrice.$dirty && myForm.mealPrice.$invalid" ng-messages="myForm.mealPrice.$error">
-                         <span class="error" ng-message="required">It is required!</span>
-                        </div>
-                  </div>
-                   <div class="input-group">
-                    <input type="number" class="form-control" id="exampleInputAmount" placeholder="% Tax Rate" name="taxRate" ng-model="taxRate" required>
-                    <div ng-show="myForm.taxRate.$dirty && myForm.taxRate.$invalid" ng-messages="myForm.taxRate.$error">
-                         <span class="error" ng-message="required">It is required!</span>
-                        </div>
-                  </div>
-                   <div class="input-group">
-                    <input type="number" class="form-control" id="exampleInputAmount" placeholder="% Tip Percentage" name="tip" ng-model="tip" required>
-                    <div ng-show="myForm.tip.$dirty && myForm.tip.$invalid" ng-messages="myForm.tip.$error">
-                         <span class="error" ng-message="required">It is required!</span>
-                        </div>
-                  </div>
-                </div>
-                 <div class="col-md-6">
-                    <button type="submit"  name="submit" class="btn btn-default" ng-click="getTotal()">Submit</button>
-                </div>
-                <div class="col-md-6">
-                   <button type="submit"  name="cancel" class="btn btn-default" ng-click="cancel()">Cancel</button>
-                </div>
-                    </form>
-        </div>
-        <div class="col-md-6">
-          <div class="col-md-12 charge">
-              <h2>Customer Charge</h2>
-              <h3>Subtotal: {{mealSubTotal | currency}}</h3>
-              <h3>Tip: {{tipTotal | currency}}</h3>
-              <hr>
-              <h3>Total: {{total | currency}}</h3>
-          </div>
-          <div class="col-md-12 earning">
-              <h2>My Earning Info</h2>
-              <h3>Tip total: {{addedTip | currency }}</h3>
-              <h3>Meal count: {{count}}</h3>
-              <h3>Average Tip Per Meal: {{averageTip | currency}}</h3>
-          </div>
-        </div>
-     </div>
-     <div class="col-md-12">
-      <button type="submit"  name="reset" class="btn btn-danger reset pull-right" ng-click="reset()">Reset</button>
-     </div>
+        <div ng-view></div>
+      </div>
     </div>
   </div>
+       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
    <script src="https://code.angularjs.org/latest/angular-messages.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="Ctrl.js"></script>

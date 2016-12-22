@@ -1,3 +1,25 @@
+
+app.config(['$routeProvider',function($routeProvider){
+$routeProvider
+.when('/home',{
+	templateUrl:'main.html',
+	controller:'oneController'
+})
+.when('/newmeal',{
+	templateUrl:'newmeal.html',
+	controller:'oneController'
+})
+.when('/myearnings',{
+	templateUrl:'earring.html',
+	controller:'oneController',
+
+})
+.when('/error',{
+	template:'<p>Error - Page Not Found</p>'
+})
+.otherwise({redirectTo:'/home'})
+}])
+
 app.controller('oneController', function($scope,$timeout) {
 	var main = this;
 	$scope.mealPrice="";
@@ -56,10 +78,9 @@ console.log("invalid");
 		$scope.total = null;
 		$scope.count = null;
 		$scope.addedTip= null;
+		$scope.averageTip= null;
 		console.log("canceled");
 	}
-
-	//reset
 	function reset(){
 		$scope.mealPrice = null;
 		$scope.taxRate = null;
@@ -72,6 +93,8 @@ console.log("invalid");
 		$scope.averageTip= null;
 		console.log("reset");
 	}
+
+
 
 
 

@@ -6,6 +6,19 @@ body{
 	
 
 }
+header{
+	font-size:25px;
+	text-align:center;
+	
+	margin-bottom:4%;
+
+}
+header a{
+	border-right: solid 2px black;
+	padding-right:7px;
+	color:black;
+		text-decoration:underline;
+}
 .Meal, .charge, .earning{
 	border:2px solid black;
 	padding:25px 10px;
