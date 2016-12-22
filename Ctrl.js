@@ -101,3 +101,20 @@ console.log("invalid");
 
 });
 
+app.run(function($rootScope, $location, $timeout) {
+		$rootScope.$on('$routeChangeError', function() {
+			$location.path("/home");
+		});
+		$rootScope.$on('$routeChangeStart', function() {
+			$rootScope.isLoading = true;
+		});
+		$rootScope.$on('$routeChangeSuccess', function() {
+		  $timeout(function() {
+  			$rootScope.isLoading = false;
+		  }, 1200);
+		});
+			});
+
+
+
+
